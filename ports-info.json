@@ -1,0 +1,32 @@
+[
+    { 
+      "application": "SRM",
+      "port": "8443"
+    }, 
+    {
+      "application": "WEBDAV",     
+      "port": "2880"
+    },
+      
+    {
+        "application": "XROOTD",
+        "port": "1094"
+    },
+    {
+        "application": "XROOTD",
+        "port": "1095"
+    },
+      
+    {
+      "application": "SRM",      
+      "port": "2811"
+    },
+    {
+      "application": "SRM",      
+      "port": "8443"
+    },
+    {
+      "application": "WEBDAV",
+      "port": "9000"
+    }
+]
