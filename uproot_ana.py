@@ -7,10 +7,11 @@ import logging
 stride = 1
 interesting_vars = ["Photon_pt", "Photon_eta", "Photon_phi", "MET_pt", "Jet_pt"]
 ##adding logger for timestamps
-logging.basicConfig(
+logging.basicConfig(filename='timestamp_logs',
+                    filemode='a',
     format='%(asctime)s %(levelname)-8s %(message)s',
     level=logging.INFO,
-    datefmt='%Y-%m-%d %H:%M:%S'
+    datefmt='%Y-%m-%d %H:%M:%S.%f'
 )
 
 if __name__ == "__main__":
@@ -23,10 +24,9 @@ if __name__ == "__main__":
             some_data = fin["Events"].arrays(interesting_vars)
             for var in interesting_vars:
                 mean = ak.mean(some_data[var])
-                print(f"Mean value for {var}: {mean}")
-            print(f"Read {fin.file.source.num_requested_bytes} bytes from file {pfn}")
+                logging.info("Mean value for {}: {}".format(var,mean))
+            logging.info('Read {} bytes from file {}'.format(fin.file.source.num_requested_bytes,pfn))
             logging.info('Opened file {} from remote location'.format(pfn))
             # Check the actual data server
             dataserver: str = fin.file.source.file.get_property("DataServer")
-            print(f"File was served from {dataserver}")
-
+            logging.info('File was served from {}'.format(dataserver))
