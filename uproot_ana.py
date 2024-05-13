@@ -13,10 +13,10 @@ def monitor(func):
 
         func(*args, **kwargs)
 
-        cpu_usage = process.cpu_percent(interval=0.01)
+        cpu_usage = process.cpu_percent(interval=1)
         memory_usage = process.memory_info().rss / 1024 / 1024 / 1024 # bytes -> GB
         net_counters = process.connections()
-        print(f"io_counters.bytes_sent:{net_counters}%")
+        print(f"connections:{net_counters}")
         print(f"CPU usage: {cpu_usage}%")
         print(f"Memory usage: {memory_usage}GB")
         mem = process.memory_percent()
