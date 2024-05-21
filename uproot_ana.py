@@ -39,11 +39,11 @@ def workflow():
     print('la')
     with open("pfns1.txt") as fin:
         file_pfns = list(l.strip() for l in fin)
-        for pfn in file_pfns[::stride]:
-            print('in')
-            logging.info('Opening file {}'.format(pfn))
-            #time.sleep(1)
-        #exit(0)
+    for pfn in file_pfns[::stride]:
+        print('in')
+        logging.info('Opening file {}'.format(pfn))
+        #time.sleep(1)
+    #exit(0)
         with uproot.open(pfn) as fin:
             some_data = fin["Events"].arrays(interesting_vars)
             for var in interesting_vars:
