@@ -11,7 +11,6 @@ ip_port_pattern = re.compile(
     r'(?P<ipv6_nobracket>[a-fA-F0-9:]+):(?P<port6_nobracket>\d{1,5})'     # IPv6 with port (no brackets)
 )
 
-# Function to parse log file and extract unique IPs (IPv4/IPv6) with port numbers
 def parse_log_file(file_path):
     unique_ips_ports = set()
     
@@ -36,7 +35,6 @@ def parse_log_file(file_path):
     
     return list(unique_ips_ports)
 
-# Function to find subnets and associate them with IPs and ports
 def find_subnets(unique_ips_ports):
     ip_subnet_mapping = []
 
@@ -47,8 +45,8 @@ def find_subnets(unique_ips_ports):
                 # For IPv4, group by /24 subnets
                 subnet = ip_network(ip_obj.exploded + '/24', strict=False)
             else:
-                # For IPv6, group by /48 subnets
-                subnet = ip_network(ip_obj.exploded + '/48', strict=False)
+                #/64 for IPv6
+                subnet = ip_network(ip_obj.exploded + '/64', strict=False)
             ip_subnet_mapping.append((ip, port, str(subnet)))
         except ValueError as e:
             print(f"Skipping invalid IP address: {ip}, Error: {e}")

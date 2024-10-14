@@ -1,7 +1,6 @@
 import pandas as pd
 from ipaddress import ip_network, ip_address
 
-# Function to extract and print unique subnets from a CSV file
 def extract_and_print_unique_subnets(csv_file_path):
     try:
         # Read the CSV file
@@ -18,8 +17,8 @@ def extract_and_print_unique_subnets(csv_file_path):
                     # For IPv4, group by /24 subnets
                     subnet = ip_network(ip_obj.exploded + '/24', strict=False)
                 else:
-                    # For IPv6, group by /48 subnets
-                    subnet = ip_network(ip_obj.exploded + '/48', strict=False)
+                    # For IPv6, group by /64 subnets
+                    subnet = ip_network(ip_obj.exploded + '/64', strict=False)
                 unique_subnets.add(str(subnet))
             except ValueError as e:
                 print(f"Skipping invalid IP address: {ip}, Error: {e}")
