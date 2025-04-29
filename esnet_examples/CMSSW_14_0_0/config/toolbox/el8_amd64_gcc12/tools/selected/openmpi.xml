@@ -1,0 +1,11 @@
+<tool name="openmpi" version="4.1.5-f880baf037a6aa7ad819da6df7257e2b">
+  <lib name="mpi"/>
+  <lib name="mpi_cxx"/>
+  <client>
+    <environment name="OPENMPI_BASE" default="/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/openmpi/4.1.5-f880baf037a6aa7ad819da6df7257e2b"/>
+    <environment name="LIBDIR"       default="$OPENMPI_BASE/lib"/>
+    <environment name="INCLUDE"      default="$OPENMPI_BASE/include"/>
+  </client>
+  <runtime name="PATH" value="$OPENMPI_BASE/bin" type="path"/>
+  <runtime name="OPAL_PREFIX" value="$OPENMPI_BASE"/>
+</tool>

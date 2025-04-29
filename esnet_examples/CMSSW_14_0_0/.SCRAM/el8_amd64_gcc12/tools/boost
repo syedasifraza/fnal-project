@@ -1,0 +1,19 @@
+{
+  "BOOST_BASE": "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/boost/1.80.0-9d4e0dc8cf1f8fc8a67cf53ae917955e",
+  "LIB": [
+    "boost_thread",
+    "boost_date_time"
+  ],
+  "LIBDIR": [
+    "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/boost/1.80.0-9d4e0dc8cf1f8fc8a67cf53ae917955e/lib"
+  ],
+  "TOOLNAME": "boost",
+  "TOOLVERSION": "1.80.0-9d4e0dc8cf1f8fc8a67cf53ae917955e",
+  "USE": [
+    "boost_header"
+  ],
+  "VARIABLES": [
+    "BOOST_BASE",
+    "LIBDIR"
+  ]
+}

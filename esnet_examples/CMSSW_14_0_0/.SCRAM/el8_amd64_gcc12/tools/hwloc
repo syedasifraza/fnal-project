@@ -1,0 +1,27 @@
+{
+  "HWLOC_BASE": "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/hwloc/2.10.0-5498f051c9868674bf3304cef2a1fa56",
+  "INCLUDE": [
+    "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/hwloc/2.10.0-5498f051c9868674bf3304cef2a1fa56/include/hwloc"
+  ],
+  "LIB": [
+    "hwloc"
+  ],
+  "LIBDIR": [
+    "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/hwloc/2.10.0-5498f051c9868674bf3304cef2a1fa56/lib"
+  ],
+  "RUNTIME": {
+    "PATH:HWLOC_PLUGINS_PATH": [
+      "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/hwloc/2.10.0-5498f051c9868674bf3304cef2a1fa56/lib/hwloc"
+    ],
+    "PATH:PATH": [
+      "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/hwloc/2.10.0-5498f051c9868674bf3304cef2a1fa56/bin"
+    ]
+  },
+  "TOOLNAME": "hwloc",
+  "TOOLVERSION": "2.10.0-5498f051c9868674bf3304cef2a1fa56",
+  "VARIABLES": [
+    "HWLOC_BASE",
+    "INCLUDE",
+    "LIBDIR"
+  ]
+}

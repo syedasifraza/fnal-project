@@ -1,0 +1,5 @@
+<tool name="rootminuit2" version="6.30.03-723f04ba093d0553281d42c7b0f6eee1">
+  <info url="http://root.cern.ch/root/"/>
+  <lib name="Minuit2"/>
+  <use name="rootgpad"/>
+</tool>

@@ -1,0 +1,10 @@
+<tool name="torch-interface" version="2.1.1-15a49c1719db6aaa8a7b1af16bba7fa5">
+  <client>
+    <environment name="TORCH_INTERFACE_BASE" default="/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/pytorch/2.1.1-15a49c1719db6aaa8a7b1af16bba7fa5"/>
+    <environment name="INCLUDE" default="$TORCH_INTERFACE_BASE/include"/>
+    <environment name="INCLUDE" default="$TORCH_INTERFACE_BASE/include/torch/csrc/api/include"/>
+    <environment name="LIBDIR" default="$TORCH_INTERFACE_BASE/lib"/>
+  </client>
+  <use name="protobuf"/>
+  <use name="zlib"/>
+</tool>

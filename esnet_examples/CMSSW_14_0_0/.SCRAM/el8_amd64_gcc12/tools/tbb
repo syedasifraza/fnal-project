@@ -1,0 +1,38 @@
+{
+  "FLAGS": {
+    "CPPDEFINES": [
+      "TBB_USE_GLIBCXX_VERSION=120301",
+      "TBB_SUPPRESS_DEPRECATED_MESSAGES",
+      "TBB_PREVIEW_RESUMABLE_TASKS=1",
+      "TBB_PREVIEW_TASK_GROUP_EXTENSIONS=1"
+    ],
+    "SYSTEM_INCLUDE": [
+      "1"
+    ]
+  },
+  "INCLUDE": [
+    "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/tbb/v2021.9.0-5109e373398eaf79a8268d6a86a2f6e2/include"
+  ],
+  "LIB": [
+    "tbb"
+  ],
+  "LIBDIR": [
+    "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/tbb/v2021.9.0-5109e373398eaf79a8268d6a86a2f6e2/lib"
+  ],
+  "RUNTIME": {
+    "PATH:ROOT_INCLUDE_PATH": [
+      "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/tbb/v2021.9.0-5109e373398eaf79a8268d6a86a2f6e2/include"
+    ]
+  },
+  "TBB_BASE": "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/tbb/v2021.9.0-5109e373398eaf79a8268d6a86a2f6e2",
+  "TOOLNAME": "tbb",
+  "TOOLVERSION": "v2021.9.0-5109e373398eaf79a8268d6a86a2f6e2",
+  "USE": [
+    "root_cxxdefaults"
+  ],
+  "VARIABLES": [
+    "TBB_BASE",
+    "LIBDIR",
+    "INCLUDE"
+  ]
+}

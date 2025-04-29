@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "RUNTIME:path:prepend:PATH=${LOCALTOP}/venv/$SCRAM_ARCH/bin"

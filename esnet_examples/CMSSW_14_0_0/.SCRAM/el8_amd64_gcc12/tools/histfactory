@@ -1,0 +1,17 @@
+{
+  "LIB": [
+    "HistFactory"
+  ],
+  "TOOLNAME": "histfactory",
+  "TOOLVERSION": "6.30.03-723f04ba093d0553281d42c7b0f6eee1",
+  "USE": [
+    "roofitcore",
+    "roofit",
+    "roostats",
+    "rootcore",
+    "roothistmatrix",
+    "rootgpad",
+    "rootxml",
+    "rootfoam"
+  ]
+}
